@@ -1,3 +1,4 @@
-# Cloud-Computing-Systems-Repo
-## Author: OULED EL BAKRI YASSINE
-## Prof: JULIEN CHABANNE 
+# Cloud Computing Systems Repository
+
+- **Author: Yassine Ouled el Bakri**
+- **Professor: Julien Chabanne**
