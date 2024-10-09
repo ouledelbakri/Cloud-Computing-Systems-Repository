@@ -1,17 +1,12 @@
-import Fastify from "fastify"
+import Fastify from "fastify";
 
-const fastify = Fastify({
-    logger: true
-})
+export function createServer() {
+  const fastify = Fastify();
 
-export function createServer(){
-    fastify.get("/feature/:code", function(req,res){
-    const code = req.params.code 
-    res.send({"code": code, "enabled": true});
-})
-    return fastify;
+  fastify.get("/feature", async function handler(request, reply) {
+    const { code } = request.params;
+    return reply.send({ code, enabled: true });
+  });
+
+  return fastify;
 }
-
-
-
-
