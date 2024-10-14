@@ -1,7 +1,9 @@
-// redisClient.mjs
 import { createClient } from "redis";
+import dotenv from 'dotenv';
 
-const client = await createClient({ url: "redis://feature-redis" })
+dotenv.config();
+
+const client = await createClient({ url: process.env.REDIS_URL })
   .on("error", (error) => console.log(error))
   .connect();
 
