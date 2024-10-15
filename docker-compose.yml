@@ -16,7 +16,6 @@ services:
   api:
     image: feature/api
     build: 
-      context: ./api
       dockerfile: ./api/Dockerfile
     container_name: feature-api 
     networks: 
