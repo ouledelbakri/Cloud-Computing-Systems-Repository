@@ -1,21 +1,27 @@
-function map(funct,array){
 
-    var res = new Array(array.length);
-    for(let i =0; i<array.length; i++){
-      res[i]=funct(array[i]);
+// Implémentation itérative de la fonction map
+function map(funct, list) {
+
+    var result = new Array(list.length);
+    // Parcourt la liste et applique la fonction sur chaque element
+    for (let i = 0; i < list.length; i++) {
+      result[i] = funct(list[i]);
     }
-    return res;
+    return result;
   }
   
-  function mapRec(funct, array){
-    if(array.length == 0){
+  // Implémentation récursive
+  function mapRecursive(funct, list) {
+    let len = list.length;
+
+    if (len === 0) {
       return [];
     }
-    return [funct(array[0]), ...mapRec(funct, array.slice(1))];
+    // Appelle la fonction sur le premier élément, puis continue récursivement sur le reste
+    return [funct(list[0]), ...mapRecursive(funct, list.slice(1))];
   }
   
-  mapArrow = (funct,array) => {
-    if(array.length == 0) { return []; }
-    return [f(array[0]), ...mapArrow(funct, array.slice(1))];
-  }
-
+  // Implémentation récursive avec fonction fléchée
+  const mapArrow = (funct, list) => 
+    list.length === 0 ? [] : [funct(list[0]), ...mapArrow(funct, list.slice(1))];
+  
