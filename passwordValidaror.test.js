@@ -17,3 +17,12 @@ test('Password has at least one digit', () => {
     expect(isNotValid).toBe(false);
     expect(isValid).toBe(true);
 });
+
+test('Password has at least one letter', () => {
+    const password = "123456789";
+    const password2 = "azerty234";
+    const isNotValid = isValidPassword(password);
+    const isValid = isValidPassword(password2);
+    expect(isNotValid).toBe(false);
+    expect(isValid).toBe(true);
+});
