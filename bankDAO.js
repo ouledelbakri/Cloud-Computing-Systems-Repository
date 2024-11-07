@@ -4,8 +4,14 @@ function retrieveBalance(accountId){
     //return Solde; 
 }
 
+function debitAccount(accountId, amount){
+    console.log(`Debiting account ${accountId} with amount ${amount}`);
+
+}
+
 const bankDAO = {
-    retrieveBalance
+    retrieveBalance,
+    debitAccount,
 };
 
 module.exports = bankDAO
