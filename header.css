@@ -1,0 +1,9 @@
+header {
+    color: var(--main-color);
+    border: var(--border);
+    font-size: 48px;
+    font-size: clamp(20px, 5vw, 48px);
+
+    block-size: 10rem;
+    inline-size: 50%;
+}

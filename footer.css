@@ -1,0 +1,7 @@
+footer {
+    color: var(--main-color);
+    border: var(--border);
+    font-size: var(--font-size-md);
+    padding: var(--space-lg);
+    text-align: start;
+}
